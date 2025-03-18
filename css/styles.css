@@ -1,0 +1,359 @@
+/* Grundlegende Reset-Styles 
+   Dies stellt sicher, dass alle Browser von einer einheitlichen Basis starten */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globale Stile 
+   Diese Stile gelten für den gesamten Body und setzen grundlegende Eigenschaften */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Stellt sicher, dass der Body mindestens die volle Viewport-Höhe einnimmt */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../bilder/brühlscheterrasse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 16px; /* Basis-Schriftgröße */
+}
+
+/* Header-Stile */
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Halbtransparenter Hintergrund */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigations-Stile */
+nav {
+    background-color: rgba(68, 68, 68, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    width: 180px;
+    margin: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown-Menü-Stile */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+nav ul li ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Container-Stile für den Hauptinhalt */
+.container {
+    flex-grow: 1;
+    padding: 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 95%;
+}
+
+/* Stile für das Dresden-Wappen */
+.dresden-wappen {
+    width: 100px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Iframe-Stile (z.B. für eingebettete Karten) */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Überschriften-Stile */
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Bild-Stile */
+img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Informations-Abschnitt-Stile */
+.info {
+    margin: 20px 0;
+}
+
+/* Tabellen-Stile */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Formular-Stile */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer-Stile */
+footer {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Responsive Styles für Tablets und kleinere Desktops */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul li {
+        width: 100%; /* Volle Breite für Navigationselemente */
+    }
+
+    nav ul li ul {
+        position: static;
+        display: none;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    /* Responsive Tabellen-Stile */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
+
+/* Responsive Styles für Smartphones */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .dresden-wappen {
+        width: 60px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+    }
+}
+
+/* Spezifische Stile für einzelne Seiten */
+
+/* Stile für die index Seite */
+body#index {
+    background-image: url('../bilder/brühlscheterrasse.jpg');
+}
+
+/* Stile für die kontakt Seite */
+body#kontakt {
+    background-image: url('../bilder/brühlscheterrasse.jpg');
+}
+
+/* Stile für die frauenkirche Seite */
+body#frauenkirche {
+    background-color: #f0f0f0;
+}
+
+body#frauenkirche header {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+/* Stile für die hygienemuseum Seite */
+body#hygienemuseum {
+    background-color: #e0e0e0;
+}
+
+body#hygienemuseum header {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+/* Stile für die semperoper Seite */
+body#semperoper {
+    background-color: #d0d0d0;
+}
+
+/* Stile für die zwinger Seite */
+body#zwinger {
+    background-color: #c0c0c0;
+}
+
+/* Stile für die goldenerreiter Seite */
+body#reiter {
+    background-color: #b0b0b0;
+}
+
+/* Stile für die blaueswunder Seite */
+body#blaueswunder {
+    background-color: #a0a0a0;
+}
+
+/* Stile für die palaisgrossergarten Seite */
+body#garten {
+    background-color: #909090;
+}
+
+/* Stile für die grünesgewölbe Seite */
+body#gewölbe {
+    background-color: #808080;
+}

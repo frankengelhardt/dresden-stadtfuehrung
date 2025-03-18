@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktive Stadtführung durch Dresden</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Verlinkung zur CSS-Datei -->
+</head>
+<body id="index">
+<header>
+    <h1>Interaktive Stadtführung durch Dresden</h1>
+    <img src="../bilder/Wappen_Dresden.png" alt="Wappen von Dresden" class="dresden-wappen">
+    <nav>
+        <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li>
+                <a href="#">Interessante Orte</a>
+                <ul>
+                    <li><a href="Frauenkirche.html">Frauenkirche</a></li>
+                    <li><a href="Zwinger.html">Zwinger</a></li>
+                    <li><a href="Blaues_Wunder.html">Blaues Wunder</a></li>
+                    <li><a href="Deutsches_Hygienemuseum.html">Deutsches Hygienemuseum</a></li>
+                    <li><a href="Goldener_Reiter.html">Goldner Reiter</a></li>
+                    <li><a href="Palais_Grosser_Garten.html">Palais Großer Garten</a></li>
+                    <li><a href="Semperoper.html">Semperoper</a></li>
+                    <li><a href="Gruenes_Gewoelbe.html">Grünes Gewöble</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <main>
+        <section>
+            <h2>Willkommen in Dresden!</h2>
+            <p>Erleben Sie die Schönheit und Geschichte von Dresden mit unserer interaktiven Stadtführung. Entdecken Sie bedeutende Sehenswürdigkeiten und erfahren Sie interessante Fakten!</p>
+        </section>
+        <section>
+            <h2>Unsere Lage</h2>
+            <p>Hier finden Sie uns:</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.620660270957!2d13.737262315674521!3d51.0514139796175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f4c5c1f0f9f1%3A0x8a7d7f5b5c1f2b3!2sFrauenkirche%20Dresden!5e0!3m2!1sde!2sde!4v1632953058856!5m2!1sde!2sde" style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- Neue Tabelle für Sehenswürdigkeiten -->
+<section>
+    <h2>Sehenswürdigkeiten in Dresden</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sehenswürdigkeit</th>
+                <th>Beschreibung</th>
+                <th>Öffnungszeiten</th>
+                <th>Eintrittspreis</th>
+                <th>Audioguide verfügbar?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Sehenswürdigkeit">Frauenkirche</td>
+                <td data-label="Beschreibung">Eine der bekanntesten Kirchen Dresdens.</td>
+                <td data-label="Öffnungszeiten">Täglich 10:00 - 18:00 Uhr</td>
+                <td data-label="Eintrittspreis">8 € (Erwachsene)</td>
+                <td data-label="Audioguide verfügbar?">Ja</td>
+            </tr>
+            <tr>
+                <td data-label="Sehenswürdigkeit">Semperoper</td>
+                <td data-label="Beschreibung">Berühmtes Opernhaus mit beeindruckender Architektur.</td>
+                <td data-label="Öffnungszeiten">Täglich 10:00 - 19:00 Uhr</td>
+                <td data-label="Eintrittspreis">12 € (Erwachsene)</td>
+                <td data-label="Audioguide verfügbar?">Ja</td>
+            </tr>
+            <tr>
+                <td data-label="Sehenswürdigkeit">Zwinger</td>
+                <td data-label="Beschreibung">Barockbau mit Museen und wunderschönen Gärten.</td>
+                <td data-label="Öffnungszeiten">Täglich 10:00 - 18:00 Uhr</td>
+                <td data-label="Eintrittspreis">10 € (Erwachsene)</td>
+                <td data-label="Audioguide verfügbar?">Ja</td>
+            </tr>
+            <tr>
+                <td data-label="Sehenswürdigkeit">Grünes Gewölbe</td>
+                <td data-label="Beschreibung">Schatzkammer mit historischen Kunstwerken.</td>
+                <td data-label="Öffnungszeiten">Di - So 10:00 - 18:00 Uhr</td>
+                <td data-label="Eintrittspreis">12 € (Erwachsene)</td>
+                <td data-label="Audioguide verfügbar?">Ja</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    </main>
+</div>
+
+<footer>
+    <p>© <span id="currentYear"></span> Interaktive Stadtführung durch Dresden. Alle Rechte vorbehalten.</p>
+</footer>
+<script src="../js/script.js"></script>
+</body>
+</html>
