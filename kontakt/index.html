@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadtführung durch Dresden</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Verlinkung zur CSS-Datei -->
+</head>
+
+<body>
+  <header>
+      <div class="container">
+        <h1><a href="../index.html">Stadtführung durch Dresden</a></h1>
+        <a href="../index.html"><img src="../img/Wappen_Dresden.png" alt="Wappen von Dresden" class="dresden-wappen"></a>
+          <nav>
+            <ul>
+              <!--<li><a>Blog</a></li>-->
+              <li><a href="#">Kontakt</a></li>
+              <li class="dropdown">
+                <a href="../interessante-orte/index.html">Interessante Orte</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../interessante-orte/frauenkirche.html">Frauenkirche</a></li>
+                    <li><a href="../interessante-orte/zwinger.html">Zwinger</a></li>
+                    <li><a href="../interessante-orte/blaues-wunder.html">Blaues Wunder</a></li>
+                    <li><a href="../interessante-orte/deutsches-hygienemuseum.html">Deutsches Hygienemuseum</a></li>
+                    <li><a href="../interessante-orte/goldener-reiter.html">Goldner Reiter</a></li>
+                    <li><a href="../interessante-orte/palais-grosser-garten.html">Palais Großer Garten</a></li>
+                    <li><a href="../interessante-orte/semperoper.html">Semperoper</a></li>
+                    <li><a href="../interessante-orte/gruenes-gewoelbe.html">Grünes Gewölbe</a></li>
+                  </ul>
+                </li>
+            </ul>
+          </nav>
+      </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2>Kontaktieren Sie uns</h2>
+        <p>Wir freuen uns über Ihr Interesse! Wenn Sie Fragen haben oder weitere Informationen benötigen, können Sie uns über das folgende Formular kontaktieren:</p>
+            
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <span id="nameError" class="error-message"></span>
+
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email">
+          <span id="emailError" class="error-message"></span>
+
+          <label for="nachricht">Nachricht:</label>
+          <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+          <span id="messageError" class="error-message"></span>
+
+          <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter">
+            Ich möchte den Newsletter abonnieren
+          </label>
+
+          <button type="submit">Absenden</button>
+        </form>
+
+        <p id="successMessage" class="success-message"></p>
+			  <div id="submittedMessage" class="submitted-message"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Unsere Kontaktdaten</h2>
+        <p>Sie können uns auch direkt kontaktieren:</p>
+        <ul>
+          <li><strong>E-Mail:</strong> <a>mustermail@mail.com</a></li>
+          <li><strong>Telefon:</strong> +49 123 456 789</li>
+          <li><strong>Adresse:</strong> Musterstraße 1, 01067 Dresden, Deutschland</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Bleiben Sie über unsere neuesten Angebote und Veranstaltungen informiert.</h2>
+      </div>
+    </section>
+
+  </main>
+
+<footer>
+    <p>© <span id="currentYear"></span> Frank Engelhardt</p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

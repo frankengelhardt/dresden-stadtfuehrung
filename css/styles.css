@@ -1,0 +1,519 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /*---------------------- General Styles --------------------*/
+
+   body {
+    min-height: 100vh; /* Stellt sicher, dass der Body mindestens die volle Viewport-Höhe einnimmt */
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
+    background-image: url('../img/brühlscheterrasse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+   }
+
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   }
+
+   .container {
+    width: 80%;
+    /*margin: 50px 30px;*/
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+
+   main {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 50px 15px;
+    padding: 50px 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+
+   section {
+    display: flex;
+    justify-content: center;
+
+   }
+
+   img {
+    width: 100%;
+   }
+
+
+   /*---------------------- Mobile Styles --------------------*/
+
+   /* Header styles */
+
+   header {
+    background-color: rgba(51, 51, 51, 0.8); /* Halbtransparenter Hintergrund */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  header .container {
+    margin: 0;
+  }
+
+  header h1 a {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+
+  .dresden-wappen {
+    width: 100px;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+  }
+
+  nav {
+    background-color: rgba(68, 68, 68, 0.8);
+  }
+
+  nav ul {
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  /* Footer styles */
+
+  footer {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  /* Kontakt Styles */
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  label {
+    margin: 10px 0 5px;
+  }
+
+  input,
+  textarea,
+  button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  /* Interessante Orte Styles */
+
+  .ort p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .ort a {
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (min-width: 768px) {
+    /* Tablet Styles */
+
+    /* General Styles */
+
+    .container {
+      max-width: 640px;
+    }
+
+    /* Interessante Orte Styles */
+
+    .orte-liste {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .ort {
+      width: 40%;
+      margin: 20px;
+    }
+
+    .ort img {
+      height: 150px;
+    }
+
+
+   }
+
+   @media only screen and (min-width: 1024px) {
+
+    /* Header Styles */
+
+    nav ul {
+      justify-content: space-evenly;
+    }
+
+    nav ul li a:hover {
+      background-color: #999999;
+      border-radius: 5px;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-menu li a {
+      color: #222;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    button:hover {
+      background-color: #347937;
+    }
+
+    .ort img:hover {
+      transform: scale(1.05);       /* Leichter Zoom-Effekt bei Hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .ort p:hover {
+      transform: scale(1.05);
+    }
+
+
+   }
+
+   @media only screen and (min-width: 1200px) {
+
+    /* Desktop styles here */
+
+    /* General styles */
+
+    .container {
+      max-width: 1100px;
+    }
+
+    /* Interessante Orte Styles */
+
+    .ort {
+      width: 20%;
+    }
+
+    #sehenswuerdigkeit img {
+      width: 75%;
+      margin: 20px auto;
+    }
+
+   }
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
