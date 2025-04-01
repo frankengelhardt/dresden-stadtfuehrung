@@ -230,7 +230,7 @@ textarea {
 
   button {
     background-color: #4CAF50;
-    color: white;
+    color: #000000;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
