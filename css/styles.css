@@ -213,6 +213,26 @@ textarea {
     width: 80%;
     margin: 0 auto;
   }
+  
+  .fake-form-notice {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f5ab62;
+  border: 1px solid #000000;
+  padding: 20px;
+  box-shadow: -20px -12px 13px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.fake-form-notice button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #e6e6e6;
+  border: none;
+  cursor: pointer;
+}
 
   label {
     margin: 10px 0 5px;
