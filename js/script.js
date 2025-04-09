@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault(); // Verhindert das Neuladen der Seite
 
-            // Hier fügen wir das Alert hinzu
-            alert('Dies ist kein echtes Formular!');
+            // Hinweis anzeigen
+            showFakeFormNotice();
 
             if (validateForm()) {
                 let name = document.getElementById("name").value.trim();
                 let message = document.getElementById("nachricht").value.trim();
-                
+
                 // Erfolgsmeldung und Nachricht anzeigen
                 document.getElementById("successMessage").textContent = "Formular wurde erfolgreich gesendet!";
                 document.getElementById("submittedMessage").innerHTML = `
@@ -27,18 +27,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 contactForm.reset();
             }
         });
-    }
-});
 
         // Event Listener für die Input-Felder (focus)
         const inputFields = document.querySelectorAll("input, textarea");
 
-        inputFields.forEach(function(field) {
+        inputFields.forEach(function (field) {
             field.addEventListener("focus", function () {
-                // Alert anzeigen, wenn ein Input-Feld fokussiert wird
-                alert('Dies ist kein echtes Formular!');
+                showFakeFormNotice();
             });
         });
+    }
+});
+
+// Funktion zur Anzeige eines nicht-blockierenden Hinweises
+function showFakeFormNotice() {
+    // Vorherige Hinweise entfernen
+    const existing = document.querySelector(".fake-form-notice");
+    if (existing) return;
+
+    const notice = document.createElement("div");
+    notice.className = "fake-form-notice";
+    notice.innerHTML = `
+        <p>Dies ist kein echtes Formular!</p>
+		<p>Es werden keine Daten gesammelt oder verschickt ! </p>
+        <button id="closeNotice">Schließen</button>
+    `;
+    document.body.appendChild(notice);
+
+    document.getElementById("closeNotice").addEventListener("click", function () {
+        notice.remove();
+    });
+}
 
 function updateFooterYear() {
     const currentYear = new Date().getFullYear();
@@ -49,7 +68,6 @@ function updateFooterYear() {
 }
 
 function validateForm() {
-    // Nur ausführen, wenn das Formular existiert
     const contactForm = document.getElementById("contactForm");
     if (!contactForm) return true;
 
@@ -95,3 +113,4 @@ function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+
